@@ -7,7 +7,25 @@
   - pip install python-pptx pillow
   - pdflatex (install via `brew install --cask mactex-no-gui`)                  
                                                                                 
-  ## Usage                                                                      
+  ## Usage
+
+   Step 1 — Go to the scripts folder:                                            
+  cd ~/Desktop/pptx-to-beamer/scripts                                           
+                                                                                
+  Step 2 — Convert the .pptx to .tex:                                           
+  python3 pptx_to_beamer.py "../Ai Slides.pptx"                                 
+                                                                                
+  Step 3 — Verify the output:                 
+  python3 verify_latex.py "Ai Slides_beamer.tex"                                
+                                                            
+  Step 4 — Compile to PDF:                                                      
+  pdflatex "Ai Slides_beamer.tex"                           
+                                                                                
+  Step 5 — Open the PDF:                                    
+  open "Ai Slides_beamer.pdf"    
+
+
+  
                                                                                 
   **Step 1 — Convert your .pptx to .tex:**                                      
   cd scripts
